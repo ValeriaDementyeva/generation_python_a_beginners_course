@@ -1,6 +1,9 @@
-p1 = int(input())
-p2 = int(input())
-q1 = int(input())
-q2 = int(input())
+m = int(input())
+n = int(input())
 
-print(abs(p1 - q1) + abs(p2 - q2))
+if m > n:
+    for i in range(m, n - 1, -1):
+        print(i)
+else:
+    for i in range(m, n + 1, 1):
+        print(i)
