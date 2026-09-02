@@ -1,9 +1,14 @@
-m = int(input())
 n = int(input())
+m = int(input())
 
-if m > n:
-    for i in range(m, n - 1, -1):
-        print(i)
-else:
-    for i in range(m, n + 1, 1):
-        print(i)
+found = False
+
+for banana in range(1, n):
+    for diamond in range(1, n):
+        for deer in range(1, n):
+            if banana + 3 * diamond + 2 * deer == m:
+                print(f"{banana} + 3×{diamond} + 2×{deer} = {m}")
+                found = True
+
+if not found:
+    print("При заданных n и m решений не существует.")
